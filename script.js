@@ -24,6 +24,4 @@ $(document).ready(function(){
         });
 
     }
-});/**
- * Created by loudumenil on 10/10/2016.
- */
+});

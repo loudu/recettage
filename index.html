@@ -2,121 +2,114 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Recettage</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="options" class="form-wrapper">
-    <fieldset class="radio-check-label" id="color">
-        <span class="label">Choose your theme</span>
-        <div class="input-wrapper">
-            <label class="radio" id="dark">
-                <input type="radio" name="color" value="dark"/>
-                <span>Dark version</span>
-            </label>
-        </div>
-        <div class="input-wrapper">
-            <label class="radio" id="light">
-                <input type="radio" name="color" value="light"/>
-                <span>Light version</span>
-            </label>
-        </div>
-        <div class="input-wrapper">
-            <label class="radio" id="none">
-                <input type="radio" name="color" value="none"/>
-                <span>Oh boy, your design suxx. Giv' me a clean version.</span>
-            </label>
-        </div>
-    </fieldset>
-</div>
+
+<h1>Recettage</h1>
+<h2>Phase préparatoire</h2>
 
 <div id="form" class="form-wrapper">
     <label class="text">
-        <span>Text and Values</span>
+        <span>Date de début du projet</span>
+        <div class="input-wrapper">
+            <input type="text" />
+        </div>
+    </label>
+    <label class="text">
+        <span>Date de fin du projet</span>
         <div class="input-wrapper">
             <input type="text" />
         </div>
     </label>
 
-    <label class="dropdown">
-        <span>Dropdown</span>
+    <label class="text">
+        <span>Pitch</span>
         <div class="input-wrapper">
-            <select size="1">
-                <option>-- Please choose --</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-            </select>
-        </div>
-    </label>
-
-    <label class="multiple">
-        <span>Multiple</span>
-        <div class="input-wrapper">
-            <select class="multiple" size="3">
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-            </select>
+            <textarea>Tapez ici </textarea>
         </div>
     </label>
 
     <label class="text">
-        <span>Some more information and also a label with a lot of text. So resize your browser and see whats happening...</span>
+        <span></span>
         <div class="input-wrapper">
-            <textarea>Write, some text here  </textarea>
+        <input type="file"> </input>
+            </div>
+    </label>
+
+<h2>Phase de cycle</h2>
+
+
+    <label class="dropdown">
+        <span>Métiers</span>
+        <div class="input-wrapper">
+            <select size="1">
+                <option>-- Choisissez un métier --</option>
+                <option value="1">Chef de projet</option>
+                <option value="2">graphiste</option>
+                <option value="3">développeur</option>
+                <option value="1">communiquant</option>
+                <option value="2">Market</option>
+            </select>
         </div>
     </label>
 
-    <fieldset class="radio-check-label">
-        <span class="label">Do you like this?</span>
 
+    <label class="text">
+        <span>Numéro de cycle</span>
         <div class="input-wrapper">
-            <label class="radio" for="yes">
-                <input type="radio" name="foo" value="yes" id="yes"/>
-                <span>Yes, please</span>
-            </label>
+            <input type="text" />
         </div>
+    </label>
 
+    <label class="text">
+    <span>Point positif</span>
+    <div class="input-wrapper">
+        <textarea>Tapez ici </textarea>
+    </div>
+</label>
+
+    <label class="text">
+        <span>Point Négatif</span>
         <div class="input-wrapper">
-            <label class="radio" for="no" >
-                <input type="radio" name="foo" value="no" id="no"/>
-                <span>No, thanks</span>
-            </label>
+            <textarea>Tapez ici </textarea>
         </div>
+    </label>
 
+    <label class="text">
+        <span>A faire </span>
         <div class="input-wrapper">
-            <label class="radio" for="maybe" for="maybe">
-                <input type="radio" name="foo" value="maybe" id="maybe"/>
-                <span>Well, maybe</span>
-            </label>
+            <textarea>Tapez ici </textarea>
         </div>
-    </fieldset>
+    </label>
 
-    <fieldset class="radio-check-label">
-        <span class="label">Please check all</span>
+
+    <label class="text">
+        <span>Fait</span>
         <div class="input-wrapper">
-            <label class="checkbox" for="accept">
-                <input type="checkbox" name="accept" id="accept"/>
-                <span>Okay, I accept all u want</span>
-            </label>
+            <textarea>Tapez ici </textarea>
         </div>
+    </label>
 
+
+    <label class="text">
+        <span>Modifier</span>
         <div class="input-wrapper">
-            <label class="checkbox" for="spam" >
-                <input type="checkbox" name="spam" id="spam"/>
-                <span>Yes, send me all your spam.</span>
-            </label>
+            <textarea>Tapez ici </textarea>
         </div>
+    </label>
 
+
+    <label class="text">
+        <span>Validé</span>
         <div class="input-wrapper">
-            <label class="checkbox" for="toolbars" >
-                <input type="checkbox" name="toolbars" id="toolbars"/>
-                <span>Install 1000 toolbars and add all available plugins to my browser</span>
-            </label>
-
+            <textarea>Tapez ici </textarea>
         </div>
-    </fieldset>
+    </label>
+
+
 
 
     <input type="submit" name="submit" value="Submit"/>
@@ -128,4 +121,6 @@
 
 
 </body>
+<script src="script.js"></script>
+
 </html>
