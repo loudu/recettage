@@ -1,28 +1,33 @@
+$.getJSON('data.json', function(data) {
+    //do stuff with your data here
+});
+
 var projet = document.getElementById('projet').value;
+console.log(project);
 var pitch = document.getElementById('pitch').value;
 var num = document.getElementById('num').value;
 
 var pv = {
-           "projet" : projet,
-           "pitch" : pitch,
-           "cycle" : [
-             
-           ] 
-          };
+ "projet" : projet,
+ "pitch" : pitch,
+ "cycle" : [
+
+ ] 
+};
 var newcycle = {"num":num,
-               "debut":"date",
-               "fin":"date",
-               "metiers":[
-                 
-               ]};
+"debut":"date",
+"fin":"date",
+"metiers":[
+
+]};
 var newmetier =     {
-                   "name":"graph",
-                    "positif":"boop",
-                    "negatif":"Clouds",
-                    "a_faire":"broken clouds",
-                    "fait":"04d",
-                    "pvalidé":"Clouds"
-                 };         
+ "name":"graph",
+ "positif":"boop",
+ "negatif":"Clouds",
+ "a_faire":"broken clouds",
+ "fait":"04d",
+ "pvalidé":"Clouds"
+};         
 
 var projet = document.getElementById('projet').value;
 var pitch = document.getElementById('pitch').value;

@@ -1,0 +1,24 @@
+{
+           "name" : "Recette",
+           "debut" : "10-10-95",
+           "fin" : "20-10-95",
+           "pitch" : "GG",
+           "cycle" : [
+             {
+               "num":"1",
+               "debut":"date",
+               "fin":"date",
+               "metiers":[
+                 {
+                   "name":"graph",
+                    "positif":"Clouds",
+                    "negatif":"Clouds",
+                    "a_faire":"broken clouds",
+                    "fait":"04d",
+                    "pvalidé":"Clouds"
+                 }
+               ]
+               
+             }
+           ] 
+          }
