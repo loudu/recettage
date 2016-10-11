@@ -1,27 +1,54 @@
-/* JS is only for label klick on iPad & theming, so you won't need any JS for you homepage (except the iPad part) */
+var projet = document.getElementById('projet').value;
+var pitch = document.getElementById('pitch').value;
+var num = document.getElementById('num').value;
 
-$(document).ready(function(){
+var pv = {
+           "projet" : projet,
+           "pitch" : pitch,
+           "cycle" : [
+             
+           ] 
+          };
+var newcycle = {"num":num,
+               "debut":"date",
+               "fin":"date",
+               "metiers":[
+                 
+               ]};
+var newmetier =     {
+                   "name":"graph",
+                    "positif":"boop",
+                    "negatif":"Clouds",
+                    "a_faire":"broken clouds",
+                    "fait":"04d",
+                    "pvalidé":"Clouds"
+                 };         
 
-    $('.form-wrapper, html').addClass('dark');
-    $('input[value="dark"]').attr('checked', 'checked');
+var projet = document.getElementById('projet').value;
+var pitch = document.getElementById('pitch').value;
 
-    $('#options input').click(function(){
-        $('.form-wrapper, html')
-            .removeClass('dark light none')
-            .addClass($(this).val());
-    });
+pv.cycle.push(newcycle);
+//pv.cycle[1].metiers.push(newmetier);
 
-    /* Label click for iPad iOS  */
-    if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/iPad/i)) {
+console.log(pv);
+/*
+var recette = new Object()
+  recette.pitch = "projet"
+  
+var cycle = new Object()
+  cycle.num = 2
+  cycle.debut = "today"
+  cycle.fin = "demain"
 
-        $('label[for]').click(function() {
-            var el = $(this).attr('for');
-            if ($('#' + el + '[type=radio], #' + el + '[type=checkbox]').attr('selected', !$('#' + el).attr('selected'))) {
-                return;
-            } else {
-                $('#' + el)[0].focus();
-            }
-        });
+var metier = new Object()
+  metier.nom = "graph"
+  metier.positif = "test"
+  metier.negatif = 'bla'
+  metier.todo="blabla"
+  metier.doing="drra"
+  metier.done="boop"
+cycles.metiers = new Array(metiers)
+recette.cycles = new Array(cycle)
 
-    }
-});
+console.log(recette)
+*/
