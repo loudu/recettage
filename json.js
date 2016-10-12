@@ -1,0 +1,1 @@
+{"projet":"GG","pitch":"WP","cycle":[{"num":"1","debut":"2016-10-03","fin":"2016-10-09","metiers":[{"name":"Chef de projet","positif":"yéyé","negatif":"wowo","todo":"ça","done":"ça","doing":"ça"}]}]}

@@ -1,4 +1,74 @@
+console.log("hey");
 
+    $.getJSON("json.json", function(result){
+        console.log(result);
+        var recette = result;
+        var projet = recette.projet;
+        var pitch = recette.pitch;
+       
+    
+     $( ".pj-title" ).html(recette.projet);
+    
+    $( ".pitch" ).html(recette.pitch); 
+for(var i=0;i<recette.cycle.length;i++){
+var num = recette.cycle[i].num;
+var debut = recette.cycle[i].debut;
+ console.log(debut);
+var fin = recette.cycle[i].fin;
+
+        $( ".pv" ).append('<div class="panel panel-default"><div class="panel-heading">Cycle N°'+num+' </div><div class="panel-body" id="cycle'+num+'">Debut: '+debut+'<br>Fin: '+fin+'</div></div>');
+
+
+
+  for(var y=0;y<recette.cycle[i].metiers.length;y++){
+var nc= recette.cycle[0].num;
+        
+        var name = recette.cycle[y].metiers[y].name;
+        console.log(name);
+        var positif = recette.cycle[y].metiers[y].positif;
+        var negatif = recette.cycle[y].metiers[y].negatif;
+        var todo = recette.cycle[y].metiers[y].todo;
+        var done = recette.cycle[y].metiers[y].done;
+        var doing = recette.cycle[y].metiers[y].doing;
+var n= i+1;
+
+ $( "#cycle"+n ).append('<div class="panel panel-default"><div class="panel-heading">'+name+'</div><div class="panel-body">positif: '+positif+'<br>negatif: '+negatif+'<br>Afaire: '+todo+'<br>fait: '+done+'<br>modifier: '+doing+'<br></div></div>');
+
+
+
+}
+}  /*
+     console.log("gg");
+        var nc= recette.cycle[0].num;
+        
+        var name = recette.cycle[0].metiers[0].name;
+        console.log(name);
+        var positif = recette.cycle[0].metiers[0].positif;
+        var negatif = recette.cycle[0].metiers[0].negatif;
+        var todo = recette.cycle[0].metiers[0].todo;
+        var done = recette.cycle[0].metiers[0].done;
+        var doing = recette.cycle[0].metiers[0].doing;
+
+        var newmetier =  {
+                   "name":name,
+                    "positif":positif,
+                    "negatif":negatif,
+                    "todo":todo,
+                    "done":done,
+                    "doing":doing
+                 };         
+console.log(nc);
+var n= nc;
+ $( "#cycle"+n ).append('<div class="panel panel-default"><div class="panel-heading">'+name+'</div><div class="panel-body">positif: '+positif+'<br>negatif: '+negatif+'<br>Afaire: '+todo+'<br>fait: '+done+'<br>modifier: '+doing+'<br></div></div>');
+nc = nc - 1;
+console.log(nc);
+pv.cycle[nc].metiers.push(newmetier);
+console.log(pv);
+console.log(JSON.stringify(pv));
+
+
+*/
+    });
 /*var projet = document.getElementById('projet').value;
 var pitch = document.getElementById('pitch').value;
 var num = document.getElementById('num').value;
@@ -16,7 +86,7 @@ var f = "5";
 var n = f.charCodeAt(0)
 var nm= f - 1;
 console.log(nm)
-*/
+
 var pv;
 function createP(){
     var projet = document.getElementById('projet').value;
@@ -81,7 +151,6 @@ nc = nc - 1;
 console.log(nc);
 pv.cycle[nc].metiers.push(newmetier);
 console.log(pv);
-console.log(JSON.stringify(pv));
     }
 function show(){
    

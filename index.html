@@ -4,45 +4,155 @@
     <meta charset="UTF-8">
     <title>Recettage</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 <body>
 
 
-<h1>Recettage</h1>
-<h2>Phase préparatoire</h2>
+    <h1>Recettage</h1>
+    <h2>Phase préparatoire</h2>
 
-<div id="form" class="form-wrapper">
-    <label class="text">
-        <span>Date de début du projet</span>
-        <div class="input-wrapper">
-            <input type="date" id="debut"/>
-        </div>
+
+    <form  >
+        <div id="form" class="form-wrapper">
+             <label class="text">
+                <span>Nom projet</span>
+                <div class="input-wrapper">
+                    <input type="text" name="" id="projet" name="projet" rows="8" cols="45" placeholder="Tapez ici"/>
+                </div>
+            </label>
+
+            <label class="text">
+                <span>Pitch</span>
+                <div class="input-wrapper">
+                    <textarea id="pitch" name="pitch" rows="8" cols="45" placeholder="Tapez ici"></textarea>
+                </div>
+            </label>
+
+            <label class="text">
+                <span>Envoi du CDC (4MO max, en PDF)</span>
+                <div class="input-wrapper">
+                    <input type="file" name="CDC"></input>
+                </div>
+
+
+
+   
     </label>
-    <label class="text">
-        <span>Date de fin du projet</span>
-        <div class="input-wrapper">
-            <input type="date" id="fin"/>
-        </div>
-    </label>
-
-    <label class="text">
-        <span>Pitch</span>
-        <div class="input-wrapper">
-            <input type="text" placeholder="Tapez ici" name="">
-        </div>
-    </label>
-
-    <label class="text">
-        <span></span>
-        <div class="input-wrapper">
-        <input type="file"></input>
-            </div>
-    </label>
-
-<h2>Phase de cycle</h2>
 
 
+
+
+            <input type="button" name="submit" value="Submit" onclick="createP()"/>
+    <input type="reset" name="reset" value="Reset"/>
+
+
+            <h2>Phase de cycle</h2>
+
+            <label class="text">
+                <span>Date de début du cycle</span>
+                <div class="input-wrapper">
+                    <input type="date" id="debut"/>
+                </div>
+            </label>
+            <label class="text">
+                <span>Date de fin du cycle</span>
+                <div class="input-wrapper">
+                    <input type="date" id="fin"/>
+                </div>
+            </label>
+
+
+            <label  class="text">
+                <span>Objectif du cycle </span>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Tapez ici" name="">
+                </div>
+            </label>
+            <label class="text">
+                <span>Numéro de cycle</span>
+                <div class="input-wrapper">
+                    <input id="num" type="number" />
+                </div>
+            </label>
+
+
+             <input type="button" name="submit" value="Submit" onclick="createG()"/>
+    <input type="reset" name="reset" value="Reset"/>
+
+
+            <label class="dropdown">
+                <span>Métiers</span>
+                <div class="input-wrapper">
+                    <select id="name" size="1">
+                        <option>-- Choisissez un métier --</option>
+                        <option value="1">Chef de projet</option>
+                        <option value="2">graphiste</option>
+                        <option value="3">développeur</option>
+                        <option value="1">communiquant</option>
+                        <option value="2">Market</option>
+                    </select>
+                </div>
+            </label>
+
+
+            <label class="text">
+                <span>Numéro de cycle</span>
+                <div class="input-wrapper">
+                    <input id="nc" type="number" />
+                </div>
+            </label>
+
+            <label class="text">
+                <span>Point positif</span>
+                <div class="input-wrapper">
+                    <input id="positif" type="text" placeholder="Tapez ici" name="">
+                </div>
+            </label>
+
+            <label class="text">
+                <span>Point Négatif</span>
+                <div class="input-wrapper">
+                    <input id="negatif" type="text" placeholder="Tapez ici" name="">
+                </div>
+            </label>
+
+            <label class="text">
+                <span>A faire </span>
+                <div class="input-wrapper">
+                    <input id="todo" type="text" placeholder="Tapez ici" name="">
+                </div>
+            </label>
+
+
+            <label class="text">
+                <span>Fait</span>
+                <div class="input-wrapper">
+                    <input id="done" type="text" placeholder="Tapez ici" name="">
+                </div>
+            </label>
+
+
+            <label class="text">
+                <span>Modifier</span>
+                <div class="input-wrapper">
+                    <input id="doing" type="text" placeholder="Tapez ici" name="">
+                </div>
+            </label>
+
+
+
+
+
+
+            <input type="button" name="submit" onclick="createC()"/>
+            <input type="reset" name="reset" value="Reset"/>
+
+            <div class="clear"></div>
+<!--
+=======
     <label class="text">
         <span>Objectif du cycle </span>
         <div class="input-wrapper">
@@ -114,21 +224,31 @@
         <span>Validé</span>
         <div class="input-wrapper">
             <input type="text" placeholder="Tapez ici" name="">
+>>>>>>> origin/master
         </div>
-    </label>
+    </form>
 
-
-
-
-    <input type="submit" name="submit" value="Submit"/>
-    <input type="reset" name="reset" value="Reset"/>
-
-    <div class="clear"></div>
+-->
+<input type="button" value="show" onclick="show()"/>
 
 </div>
 
+<div class="viewer">
+    
+
+<div class="panel panel-default">
+  <div class="panel-heading pj-title">Projet</div>
+    <div class="panel-body pv"><div>Pitch:<span class="pitch"></span></div>
+
+
+</div></div>
+</div>
 
 </body>
-<script src="script.js"></script>
 
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </html>
